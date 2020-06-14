@@ -8,6 +8,21 @@ integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigins = "a
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First HTML Page</title>
+    <script>
+        $(document).ready(function(){
+            $("#btnSend").click(function(){
+                $.ajax({
+                    url: "http://192.168.0.150:8000/add",
+                    type: "POST",
+                    data:JSON.stringify({
+                        "id":01,
+                        "contents": $('#student').val()
+                    }),
+                });
+            });
+
+        });
+    </script>
 </head>
 <body>
     <p>Hello this is pargarph </p>
