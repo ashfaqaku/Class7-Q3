@@ -26,6 +26,7 @@ struct Message{
 fn make_cors() ->Cors{
     let allowed_origins = AllowedOrigins::some_exact(&[
         "http://bootcamp2020ap.surge.sh/",
+        "http://127.0.0.1:8080"
     ]);
     CorsOptions{
         allowed_origins,
